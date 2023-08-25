@@ -1,0 +1,29 @@
+body {
+    background-color: yellowgreen;
+}
+.container {
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+    color: darkcyan;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#player1 {
+    font-size: 3rem;
+    color: darkcyan;
+    font-family: 'Times New Roman', Times, serif;
+    width: 40%; 
+    display: inline-block;
+}
+
+#player2 {
+    font-size: 3rem;
+    color: darkcyan;
+    font-family: 'Times New Roman', Times, serif;
+    width: 40%;
+    display: inline-block;
+}
