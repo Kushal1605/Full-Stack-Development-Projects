@@ -35,8 +35,11 @@ button {
     background-color:#279EFF; 
     color: #0C356A;
     font-size: 3rem;
+    cursor: pointer;
 }
-
+button:hover {
+    background-color: #ccc;
+  }
 @media (max-width: 768px) {
     #player1 {
         display: block;
