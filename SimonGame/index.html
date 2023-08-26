@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Simon Game</title>
+</head>
+<body>
+    <div  class="container">
+        <h1 id="header">Press A To Start The Game</h1>
+        <div class="first">
+            <button class="item green 0"  title="green"></button>
+            <button class="item red 1" title="red"></button>
+        </div>
+        <div class="second">
+            <button class="item yellow 2" title="yellow"></button>
+            <button class="item blue 3" title="blue"></button>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn mybtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            How To Play?
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="text-align: start">
+            <div class="modal-content" style="background-color: #F6FFA6; color: #321E1E;">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Instructions</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <ul>
+                    <li>Press A to start the game.</li>
+                    <li>One the game starts, in each level a coloured button will blink.</li>
+                    <li>To pass the level you have to press the coloured button that blinked in the current level as 
+                        well as from the previous level in the correct serquence.</li>
+                    <li>If the sequence is wrong then the game will restart.</li>
+
+                </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

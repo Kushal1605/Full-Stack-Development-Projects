@@ -1,0 +1,65 @@
+body {
+    background-color: #041C32 !important;
+}
+.container {
+    text-align: center;
+}
+
+#header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #FF6D60;
+    font-size: 3rem;
+}
+
+.first {
+    width: 50%;
+    margin: auto;
+}
+
+.second {
+    width: 50%;
+    margin: auto;
+}
+
+.item {
+    height: 250px;
+    width: 250px;
+    border: 3px solid black;
+    border-radius: 20%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: #E76161;
+}
+
+.blue {
+    background-color: #7091F5;
+}
+
+.yellow {
+    background-color: #FFFD8C;
+}
+
+.green {
+    background-color: #A8DF8E;
+}
+
+.mybtn {
+    padding: 10px;
+    border-radius: 8%;
+    border: 2px solid black !important;
+    cursor: pointer;
+    font-size: 2rem !important;
+    background-color: #00C4FF !important;
+}
+
+.pressed {
+    background-color: white;
+    opacity: 0.5;
+  }
+.gameOver {
+    background-color: red !important;
+}
