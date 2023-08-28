@@ -68,19 +68,18 @@ body {
 }
 @media (max-width: 700px) {
     .item {
-        height: 150px;
-        width: 150px;
+        height: 80px;
+        width: 80px;
     }
     #header {
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         font-size: 3rem;
         font-weight: 800;
     }
     .mybtn {
         font-weight: 500;
         font-size: small !important;
-        width: 50px !important;
     }
 
 }
