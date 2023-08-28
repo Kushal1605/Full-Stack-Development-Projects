@@ -79,6 +79,8 @@ body {
     }
     .mybtn {
         font-weight: 500;
+        font-size: small !important;
+        width: 50px !important;
     }
 
 }
