@@ -28,7 +28,7 @@ header {
 #header {
     text-align: center;
     margin: 20px;
-    font-size: 60px;
+    font-size: 7vh;
     position: relative;
 }
 
@@ -172,19 +172,19 @@ header {
     justify-content: center;
     align-items: center;
     height: 75%;
-    width: 18%;
-    font-size: 120%;
-    font-weight: bolder;
-    background-color: rgb(40, 43, 38);
+    width: 30%;
+    font-weight: 600;
+    font-size: 100%;
     color: rgb(212, 199, 199);
-    border: 2px solid rgb(228, 217, 217);
     border-radius: 5%;
+    border: 2px solid rgb(228, 217, 217);
+    background-color: rgb(40, 43, 38);
     transition: 0.2s;
     filter: drop-shadow(3px 3px 5px black);
 }
 
 .hit-number:hover, .timer:hover, .score:hover {
-    scale:1.1;
+    scale:1.05;
 }
 
 .red-popup {
@@ -197,7 +197,8 @@ header {
 }
 
 .game-over {
-    font-size: 60px;
+    /* font-size: 50px; */
+    font-size: 6.6vw;
     color: rgba(255, 0, 0, 0.749);
     position: relative;
 }
@@ -215,4 +216,14 @@ header {
 .game-over:hover::after {
     content: '';
     animation: underline 1.5s forwards ease-out;
+}
+
+@media (max-width: 768px) {
+    .hit-number, .timer, .score {
+        font-size: 20px;
+        width: 33%;
+        padding: 3px;
+    }
+    .game-over {
+    }
 }

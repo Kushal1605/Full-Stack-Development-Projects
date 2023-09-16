@@ -71,7 +71,7 @@ function generateRandomNumber() {
 
 function randomNumberToBeHit() {
     numberToBeHit = Math.floor(Math.random() * 10)
-    document.querySelector('.hit-number').innerHTML = `Hit Number: ${numberToBeHit}`
+    document.querySelector('.hit-number').innerHTML = `Hit: ${numberToBeHit}`
 }
 
 function runTimer() {
