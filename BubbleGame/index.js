@@ -31,7 +31,7 @@ document.querySelector('.main-panel').addEventListener('click', (e) => {
 
 function startGame() {
     mainPanel.innerHTML = ''
-    time = 3000
+    time = 30
     isGameStarted = true
     startBtn.innerHTML = 'Quit Game'
     document.querySelector('.timer').innerHTML = `Time: ${time}`
