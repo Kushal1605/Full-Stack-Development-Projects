@@ -4,8 +4,6 @@ var isGameStarted = false
 var time = 30
 var score = 0
 var numberToBeHit
-var interval_ID
-
 
 const availableWidth = window.innerWidth * 0.8;
 const availableHeight = mainPanel.clientHeight
@@ -14,8 +12,6 @@ const bubbleHeight = 64
 const bubbleCountInWidth = Math.floor((availableWidth - 10) / bubbleWidth)
 const bubbleCountInHeight = Math.floor((availableHeight - 10) / bubbleHeight)
 const bubbleCount = bubbleCountInHeight * bubbleCountInWidth
-
-console.log(`availableWidth: ${availableWidth} bubbleCount: ${bubbleCount} availableHeight ${availableHeight}`)
 
 startBtn.addEventListener('click', () => {
     if(!isGameStarted) {
@@ -34,7 +30,7 @@ function startGame() {
     time = 30
     isGameStarted = true
     startBtn.innerHTML = 'Quit Game'
-    document.querySelector('.timer').innerHTML = `Time: ${time}`
+    document.querySelector('.timer').innerHTML = `Time: ${time}s`
     document.querySelector('.score').innerHTML = `Score: ${score}`
 
     generateBubble()
@@ -44,7 +40,7 @@ function startGame() {
 
 }
 function startCountDown() {
-    interval_ID = setInterval(() => {
+    var interval_ID = setInterval(() => {
     if(time > 0) {
         runTimer()
     } else {
@@ -79,7 +75,7 @@ function runTimer() {
     if(time < 11) {
         document.querySelector('.timer').classList.toggle('red-popup')
     }
-    document.querySelector('.timer').innerHTML = `Time: ${time}`
+    document.querySelector('.timer').innerHTML = `Time: ${time}s`
 }
 
 function userClickEvent(e) {

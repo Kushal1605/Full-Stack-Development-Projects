@@ -23,13 +23,15 @@ body {
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #header {
     text-align: center;
     margin: 20px;
-    font-size: 7vh;
+    font-size: 8vh;
     position: relative;
+    -webkit-text-stroke: 1px rgb(153, 192, 215);
 }
 
 #header::after {
@@ -160,6 +162,7 @@ header {
     justify-content: center;
     cursor: pointer;
     border: 2px solid rgb(23, 23, 23);
+    font-size: 20px;
 }
 
 .bubble:hover {
@@ -197,10 +200,10 @@ header {
 }
 
 .game-over {
-    /* font-size: 50px; */
     font-size: 6.6vw;
     color: rgba(255, 0, 0, 0.749);
     position: relative;
+    filter: none;
 }
 
 .game-over::after {
@@ -223,7 +226,5 @@ header {
         font-size: 20px;
         width: 33%;
         padding: 3px;
-    }
-    .game-over {
     }
 }
