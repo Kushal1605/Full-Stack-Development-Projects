@@ -218,15 +218,6 @@ header {
     animation: underline 1.5s forwards ease-out;
 }
 
-.correct-ans {
-    /* background-color: rgb(0, 208, 255); */
-    animation: rotate 0.7s ease-out;
-}
-
-.wrong-ans {
-    background-color: red;
-    animation: rotate 0.5s ease-out;
-}
 @keyframes rotate {
     from {
         transform: rotateY(0deg);
