@@ -28,6 +28,7 @@ header {
 
 #header {
     text-align: center;
+    font-weight: 1000;
     margin: 20px;
     font-size: 8vh;
     position: relative;
@@ -195,12 +196,8 @@ header {
     box-shadow: 5px 5px 10px red;
 }
 
-.fade {
-    opacity: 0;
-}
-
 .game-over {
-    font-size: 6.6vw;
+    font-size: 6vw;
     color: rgba(255, 0, 0, 0.749);
     position: relative;
     filter: none;
@@ -220,6 +217,25 @@ header {
     content: '';
     animation: underline 1.5s forwards ease-out;
 }
+
+.correct-ans {
+    /* background-color: rgb(0, 208, 255); */
+    animation: rotate 0.7s ease-out;
+}
+
+.wrong-ans {
+    background-color: red;
+    animation: rotate 0.5s ease-out;
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
 
 @media (max-width: 768px) {
     .hit-number, .timer, .score {
