@@ -92,12 +92,12 @@ header {
 .btn:hover {
     background-color: rgb(1, 44, 199);
     filter: drop-shadow(0px 0px 5px whitesmoke);
-    scale: 1.2;
+    scale: 1.05;
 
 }
 
 .btn:active {
-    scale: 0.9;
+    scale: 0.95;
 }
 
 .panel-control {
@@ -141,7 +141,10 @@ header {
     text-align: center;
     padding: 10px;
     border: 2px solid rgba(8, 58, 107, 0.934);
-    background-color: rgb(22, 207, 96, 0.4);
+    /* background-color: rgb(22, 207, 96, 0.4); */
+    background: linear-gradient(90deg,rgb(69, 194, 206), rgb(37, 158, 210), rgb(27, 93, 207));
+    background-size: 200%;
+    animation: backgroundGradient 5s  0.7s infinite backwards ease-out;
     width: 80%;
     height: 75vh;
     display: flex;
@@ -157,18 +160,20 @@ header {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-color: rgb(205, 228, 211);
+    background-color: rgb(255, 255, 255);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 2px solid rgb(23, 23, 23);
+    border: 2px solid rgba(26, 23, 192, 0.797);
     font-size: 20px;
+    transition: all ease 0.5s;
 }
 
 .bubble:hover {
-    background-color: rgba(12, 159, 71, 0.6);
-    box-shadow: 8px 8px 10px rgb(2, 70, 29);
+    background-color: rgb(116, 255, 9);
+    filter: drop-shadow(-1px 4px 4px rgb(116, 255, 9));
+    color: rgb(255, 0, 0);
 }
 
 .hit-number, .timer, .score {
@@ -192,13 +197,13 @@ header {
 }
 
 .red-popup {
-    background-color: red;
-    box-shadow: 5px 5px 10px red;
+    background-color: rgba(212, 18, 18, 0.922);
+    box-shadow: 5px 5px 10px rgba(196, 13, 13, 0.828);
 }
 
 .game-over {
     font-size: 6vw;
-    color: rgba(255, 0, 0, 0.749);
+    color: rgba(211, 14, 14, 0.749);
     position: relative;
     filter: none;
 }

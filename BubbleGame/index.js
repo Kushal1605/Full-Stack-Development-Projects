@@ -25,6 +25,7 @@ startBtn.addEventListener('click', () => {
 })
 
 document.querySelector('.main-panel').addEventListener('click', (e) => {
+    flag = false
     userClickEvent(e)
 })
 
@@ -94,7 +95,7 @@ function runTimer() {
 function userClickEvent(e) {
     if(e.target.innerHTML == numberToBeHit) {
         for(let i = 0; i < bubbleCount; i++) {
-            if(document.querySelector(`#bubble-${i}`).style.backgroundColor === 'red') {
+            if(document.querySelector(`#bubble-${i}`).style.backgroundColor === 'rgb(206, 28, 15)') {
                 document.querySelector(`#bubble-${i}`).style.backgroundColor = ''
             }
         }
@@ -102,6 +103,8 @@ function userClickEvent(e) {
         e.target.style.animationName = 'rotate'
         e.target.style.animationDuration ='1s'
         e.target.style.backgroundColor = 'rgb(0, 208, 255)'
+        e.target.filter = 'none !important'
+
         setTimeout(() => {
             mainPanel.innerHTML = ''
             generateBubble()
@@ -113,7 +116,8 @@ function userClickEvent(e) {
     } else if(e.target.classList[0] == 'bubble' && !flag) {
         e.target.style.animationName = 'rotate'
         e.target.style.animationDuration ='1s'
-        e.target.style.backgroundColor = 'red'
+        e.target.style.backgroundColor = 'rgb(206, 28, 15)'
+        e.target.filter = 'none !important'
         flag = false
     }
 }
