@@ -107,6 +107,13 @@ function userClickEvent(e) {
 
         setTimeout(() => {
             mainPanel.innerHTML = ''
+            const interval_ID = setInterval(() => {
+                if(time === 0) {
+                    endGame()
+                    clearInterval()
+                }
+            }, 0)
+
             generateBubble()
             generateRandomNumber()
         }, 1000);
