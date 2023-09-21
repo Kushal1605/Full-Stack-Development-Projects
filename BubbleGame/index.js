@@ -32,7 +32,7 @@ document.querySelector('.main-panel').addEventListener('click', (e) => {
 // Function to start the game.
 function startGame() {
     mainPanel.innerHTML = ''
-    time = 3
+    time = 30
     score = 0
     isGameStarted = true
     startBtn.innerHTML = 'Quit Game'
