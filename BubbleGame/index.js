@@ -32,7 +32,7 @@ document.querySelector('.main-panel').addEventListener('click', (e) => {
 // Function to start the game.
 function startGame() {
     mainPanel.innerHTML = ''
-    time = 30
+    time = 3
     score = 0
     isGameStarted = true
     startBtn.innerHTML = 'Quit Game'
@@ -60,6 +60,7 @@ function startCountDown() {
 
 // Create bubbles.
 function generateBubble() {
+    mainPanel.innerHTML = ''
     for(let i = 0; i < bubbleCount; i++) {
         const bubbleEle = document.createElement('div')
         bubbleEle.classList.add('bubble')
@@ -103,28 +104,21 @@ function userClickEvent(e) {
         e.target.style.animationName = 'rotate'
         e.target.style.animationDuration ='1s'
         e.target.style.backgroundColor = 'rgb(0, 208, 255)'
-        e.target.filter = 'none !important'
-
+        
         setTimeout(() => {
-            mainPanel.innerHTML = ''
-            const interval_ID = setInterval(() => {
-                if(time === 0) {
-                    endGame()
-                    clearInterval()
-                }
-            }, 0)
-
-            generateBubble()
-            generateRandomNumber()
+            // mainPanel.innerHTML = ''
+            if(time > 1) {
+                generateBubble()
+                generateRandomNumber()
+            }
+            randomNumberToBeHit();
+            document.querySelector('.score').innerHTML = `Score: ${score}`
         }, 1000);
-        randomNumberToBeHit();
-        document.querySelector('.score').innerHTML = `Score: ${score}`
         flag = true
     } else if(e.target.classList[0] == 'bubble' && !flag) {
         e.target.style.animationName = 'rotate'
         e.target.style.animationDuration ='1s'
         e.target.style.backgroundColor = 'rgb(206, 28, 15)'
-        e.target.filter = 'none !important'
         flag = false
     }
 }
@@ -133,7 +127,7 @@ function userClickEvent(e) {
 function endGame() {
     if(document.querySelector('.timer').classList[1] === 'red-popup') document.querySelector('.timer').classList.remove('red-popup') 
     time = 0
-    startBtn.innerHTML = 'Play Again'
+    startBtn.innerHTML = 'Play Again'   
     mainPanel.innerHTML = `<h1 class='game-over'> Game Over. Your Score is ${score} </h1>`
     isGameStarted = false
 }
