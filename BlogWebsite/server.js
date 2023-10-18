@@ -1,6 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express();
 const port = 3000;
@@ -11,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Connect to MongoDB server
-mongoose.connect('mongodb+srv://kushalgupta1605:kushal1605@cluster0.d3q7dfv.mongodb.net/BlogDB')
+mongoose.connect(process.env.MONGODB_URI)
 
 // Create schema for blogs
 const blogSchema = new mongoose.Schema({
