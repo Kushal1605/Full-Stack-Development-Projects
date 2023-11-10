@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,8 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "mongoose": "^7.6.0",
+    "netlify-cli": "^17.2.2",
+    "netlify-lambda": "^2.0.16",
     "request-ip": "^3.3.0"
   }
 }
