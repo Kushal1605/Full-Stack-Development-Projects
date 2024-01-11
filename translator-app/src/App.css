@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 10%;
+  left:10%;
+  color: white;
+  font-size: 30px;
+  margin-left: 25%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #600ee4;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 25%;
+  left: 21%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.438);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+textarea {
+  height: 30vh;
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.437);
+  resize: none;
+  outline: none;
+  font-size: 25px;
+}
+
+.from-input {
+  border-right: 1px solid rgba(0, 0, 0, 0.319);
+}
+
+.controls {
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.from-control, 
+.to-control {
+  display: flex;
+  align-items: space-evenly;
+  justify-content: center;
+  gap: 20px;
+  width: 40%;
+}
+
+.from-control .fa-copy {
+  margin-right: 10px;
+}
+
+.from-control .fa-volume-high {
+  padding-right: 30px;
+  border-right: 2px solid rgba(0, 0, 0, 0.331);
+}
+
+.to-control .fa-copy {
+  margin-left: 10px;
+}
+
+.to-control .fa-volume-high {
+  padding-left: 30px;
+  border-left: 2px solid rgba(0, 0, 0, 0.331);
+}
+.fa-solid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+select {
+  border: none;
+  padding-right: 13px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+option {
+  font-size: 14px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  align-self: center;
+  height: 50px;
+  font-size: 25px;
+  background-color: #600ee4;
+  color: #fff;
+  margin: 10px;  
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b1180;
+}
