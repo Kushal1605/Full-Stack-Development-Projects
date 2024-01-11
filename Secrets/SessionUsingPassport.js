@@ -23,7 +23,7 @@ app.use(session({
     saveUninitialized: false,
 }))
 
-// Initializing the session and passport.js 
+// Initializing the passport and allowing to create session
 app.use(passport.initialize())
 app.use(passport.session())
 

@@ -30,7 +30,7 @@ app.use(session({
     saveUninitialized: false,
 }))
 
-// Initializing the session and passport.js 
+// Initializing passport and allowing it to create session 
 app.use(passport.initialize())
 app.use(passport.session())
 
@@ -70,7 +70,7 @@ passport.deserializeUser(function(user, cb) {
     });
 });
 
-// Using the google oauth GoogleStrategy() to provide sign in feature functionality for the website
+// Using the google oauth strategy to provide sign in feature functionality for the website
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,    // ClientId generated from google cloud api services
     clientSecret: process.env.CLIENT_SECRET,  // ClientSecret generated from google cloud api services
