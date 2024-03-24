@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Connect to MongoDB server
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect()
 
 // Create schema for blogs
 const blogSchema = new mongoose.Schema({
